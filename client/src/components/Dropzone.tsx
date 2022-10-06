@@ -1,9 +1,12 @@
-import React, { useRef, useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import Image from '../assets/image.svg';
 
-function Dropzone({ handleFile }: any) {
+interface DropzoneProps {
+  handleFile: (newFile: File) => void;
+}
+
+function Dropzone({ handleFile }: DropzoneProps) {
   const [dragActive, setDragActive] = useState(false);
-  const inputRef = useRef(null);
 
   const handleDrag = (e: React.DragEvent<HTMLFormElement> | React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
@@ -24,9 +27,22 @@ function Dropzone({ handleFile }: any) {
     }
   };
 
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    if (e.target.files && e.target.files[0]) {
+      handleFile(e.target.files[0]);
+    }
+  };
+
   return (
     <form action="" className="h-64 w-96 max-w-full text-center relative" onDragEnter={handleDrag}>
-      <input ref={inputRef} className="hidden" id="file-upload" multiple={false} type="file" />
+      <input
+        className="hidden"
+        id="file-upload"
+        multiple={false}
+        type="file"
+        onChange={handleInputChange}
+      />
       <label
         className={`flex items-center justify-center border-2 rounded-2xl border-dashed hover:border-dotted border-[#97BEF4] bg-[#F6F8FB] active:opacity-70 active:border-double h-full ${
           dragActive ? 'opacity-75 border-double' : ''
