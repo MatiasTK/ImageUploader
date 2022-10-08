@@ -72,7 +72,7 @@ function App() {
 
         <footer className="absolute bottom-2 text-sm text-[#A9A9A9]">
           <p>
-            Created by
+            <span>Created by </span>
             <a className="font-bold underline" href="https://github.com/MatiasTK">
               Matias Vallejos
             </a>

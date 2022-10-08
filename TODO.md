@@ -1,7 +1,7 @@
 - [x] Check icon on success
-- [ ] Change path
-- [ ] Deploy
+- [x] Deploy
 - [x] Fix success page
-- [ ] Fix footer and put in all pages
-- [ ] Readme
+- [x] Fix footer and put in all pages
+- [ ] Fix some UI bugs
+- [x] Readme
 - [ ] Major Refactor
