@@ -1,9 +1,7 @@
-- [ ] Check icon on success
+- [x] Check icon on success
 - [ ] Change path
 - [ ] Deploy
-- [ ] Fix success page
+- [x] Fix success page
 - [ ] Fix footer and put in all pages
-- [ ] Make popover from scratch ?
-- [ ] Make readme
-- [ ] Make DarkMode
+- [ ] Readme
 - [ ] Major Refactor

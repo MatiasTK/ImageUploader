@@ -35,8 +35,13 @@ function Dropzone({ handleFile }: DropzoneProps) {
   };
 
   return (
-    <form action="" className="h-64 w-96 max-w-full text-center relative" onDragEnter={handleDrag}>
+    <form
+      action=""
+      className="sm:w-96 h-64 w-72 max-w-full text-center relative"
+      onDragEnter={handleDrag}
+    >
       <input
+        accept="image/png, image/gif, image/jpeg"
         className="hidden"
         id="file-upload"
         multiple={false}
@@ -51,7 +56,7 @@ function Dropzone({ handleFile }: DropzoneProps) {
       >
         <div className="flex flex-col items-center">
           <img alt="Sample upload img" src={Image} />
-          <p className="text-[#BDBDBD] mt-5 text-lg">Drag & drop your file here</p>
+          <p className="text-[#BDBDBD] mt-5">Drag & drop your file here</p>
         </div>
       </label>
       {dragActive && (
