@@ -9,8 +9,10 @@ type SuccessProps = {
 };
 
 function Success({ photoId, setStatus }: SuccessProps) {
+  const url = import.meta.env.VITE_API_URL;
+
   const handleCopyToClipboard = () => {
-    navigator.clipboard.writeText(`http://localhost:4000/uploads/${photoId}`);
+    navigator.clipboard.writeText(`${url}/uploads/${photoId}`);
   };
 
   return (
@@ -21,10 +23,10 @@ function Success({ photoId, setStatus }: SuccessProps) {
         <img
           alt="Uploaded img"
           className="rounded-xl md:max-w-[340px] max-w-[250px] h-auto"
-          src={`http://localhost:4000/uploads/${photoId}`}
+          src={`${url}/uploads/${photoId}`}
         />
         <div className="bg-[#F6F8FB] border border-[#E0E0E0] w-full h-9 flex items-center py-8 pl-3 pr-1 rounded-lg gap-2 mt-5">
-          <p className="truncate">{`http://localhost:4000/uploads/${photoId}`}</p>
+          <p className="truncate">{`${url}/uploads/${photoId}`}</p>
           {/* @ts-ignore: Types issue with package */}
           <Tooltip arrow placement="top" title="Copied!" trigger="click">
             <button

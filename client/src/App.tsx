@@ -14,10 +14,12 @@ function App() {
   const handleFile = (newFile: File) => {
     setStatus('uploading');
     const data = new FormData();
+    const url = import.meta.env.VITE_API_URL;
+    console.log(url);
 
     data.append('image', newFile);
     axios
-      .post('http://localhost:4000/api/uploads', data, {
+      .post(`${url}/api/uploads`, data, {
         headers: { 'Content-Type': 'multipart/form-data' },
       })
       .then((res) => {

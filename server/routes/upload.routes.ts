@@ -24,9 +24,12 @@ router.post('/api/uploads', (req, res) => {
       return res.send(err);
     }
 
-    console.log(req.file);
     return res.json({ id: req.file?.filename });
   });
+});
+
+router.get('/api/ping', (req, res) => {
+  res.send('Pong');
 });
 
 export default router;
