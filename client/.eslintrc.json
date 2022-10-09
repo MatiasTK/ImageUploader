@@ -52,12 +52,11 @@
       { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*" },
       { "blankLine": "any", "prev": ["const", "let", "var"], "next": ["const", "let", "var"] }
     ],
-    "no-unused-vars": "warn"
+    "no-unused-vars": "off"
   },
   "settings": {
     "import/resolver": {
       "typescript": {}
     }
-  },
-  "ts-expect-error": "allow-with-description"
+  }
 }

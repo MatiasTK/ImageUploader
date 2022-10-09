@@ -15,7 +15,6 @@ function App() {
     setStatus('uploading');
     const data = new FormData();
     const url = import.meta.env.VITE_API_URL;
-    console.log(url);
 
     data.append('image', newFile);
     axios

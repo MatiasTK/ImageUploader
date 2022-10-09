@@ -1,9 +1,9 @@
 import React, { ChangeEvent, useState } from 'react';
 import Image from '../assets/image.svg';
 
-interface DropzoneProps {
-  handleFile: (newFile: File) => void;
-}
+type DropzoneProps = {
+  handleFile: (file: File) => void;
+};
 
 function Dropzone({ handleFile }: DropzoneProps) {
   const [dragActive, setDragActive] = useState(false);

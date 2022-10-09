@@ -2,6 +2,7 @@
 - [x] Deploy
 - [x] Fix success page
 - [x] Fix footer and put in all pages
+- [x] Make own tooltip
 - [ ] Fix some UI bugs
 - [x] Readme
 - [ ] Major Refactor

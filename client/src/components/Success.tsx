@@ -1,7 +1,6 @@
 import React from 'react';
-import { Tooltip } from 'react-tippy';
 import check from '../assets/check.svg';
-import 'react-tippy/dist/tippy.css';
+import Tooltip from './Tooltip';
 
 type SuccessProps = {
   photoId: string;
@@ -25,12 +24,11 @@ function Success({ photoId, setStatus }: SuccessProps) {
           className="rounded-xl md:max-w-[340px] max-w-[250px] h-auto"
           src={`${url}/uploads/${photoId}`}
         />
-        <div className="bg-[#F6F8FB] border border-[#E0E0E0] w-full h-9 flex items-center py-8 pl-3 pr-1 rounded-lg gap-2 mt-5">
+        <div className="bg-[#F6F8FB] border border-[#E0E0E0] w-full h-9 flex items-center py-7 pl-3 pr-1 rounded-lg gap-2 mt-5">
           <p className="truncate">{`${url}/uploads/${photoId}`}</p>
-          {/* @ts-ignore: Types issue with package */}
-          <Tooltip arrow placement="top" title="Copied!" trigger="click">
+          <Tooltip>
             <button
-              className="bg-[#2F80ED] rounded-lg text-white py-4 px-8 whitespace-nowrap"
+              className="bg-[#2F80ED] rounded-lg text-white py-3 px-5 whitespace-nowrap"
               id="#copyButton"
               type="button"
               onClick={handleCopyToClipboard}
