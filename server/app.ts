@@ -20,7 +20,7 @@ export default function startExpress() {
 
   app.use(express.static(`${process.cwd()}/public`));
 
-  app.listen(PORT, () => {
-    console.log(`Server is running on port: ${PORT}`);
+  app.listen(PORT || 8080, () => {
+    console.log(`Server is running on port: ${PORT || 8080}`);
   });
 }

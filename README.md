@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://matiastk-image-uploader.netlify.app/">
+    <a href="https://matiastk-imageuploader.up.railway.app/">
       Demo
     </a>
     <span> | </span>
@@ -83,7 +83,7 @@ $ pnpm start
 $ cd client
 $ pnpm install
 $ pnpm run build
-$ pnpm run preview
+$ pnpm run start
 ```
 
 **Note: In order to use the local server API you need to change the .env `VITE_API_URL` to your local server URL**.
